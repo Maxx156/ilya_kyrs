@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - TravelSite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-globe"></i> TravelSite</a>
+            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="goryachie-putevki.html">Горящие путевки</a></li>
+                    <li><a href="oteli.html">Отели</a></li>
+                    <li><a href="strany.html">Страны</a></li>
+                    <li><a href="o-nas.html" class="active">О нас</a></li>
+                    <li><a href="kontakty.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Вход</button>
+                <button class="btn btn-primary" id="registerBtn"><i class="fas fa-user-plus"></i> Регистрация</button>
+            </div>
+            <button class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>О нашей компании</h1>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <img src="https://travelsite.ca/assets/images/share.jpg?v=23b414da" alt="О нас">
+                    <div class="about-text">
+                        <h2>TravelSite — ваш проводник в мире путешествий</h2>
+                        <p>Мы работаем с 2010 года и помогли отдохнуть более 50 000 туристов. Наша миссия — сделать путешествия доступными и комфортными для каждого.</p>
+                        <p>Мы тщательно подбираем отели, туры и направления, чтобы вы получали только лучшие впечатления.</p>
+                    </div>
+                </div>
+                <div class="team">
+                    <h2>Наша команда</h2>
+                    <div class="cards-grid">
+                        <div class="card team-card">
+                            <img src="https://www.e-xecutive.ru/uploads/article/image/1990772/thumb_Irina_Travkina_executive_ru.jpg" alt="Сотрудник">
+                            <h3>Анна Иванова</h3>
+                            <p>Генеральный директор</p>
+                        </div>
+                        <div class="card team-card">
+                            <img src="https://img.championat.com/kNvMsB8Q0vSG2mBP6IRHg4rRZQX17TIRM96IgqmCkMA/p(q:0)/news/big/r/b/10-priznakov-nastoyaschego-muzhchiny-prover-sebya_1671197209553984706.jpg" alt="Сотрудник">
+                            <h3>Петр Сидоров</h3>
+                            <p>Ведущий менеджер</p>
+                        </div>
+                        <div class="card team-card">
+                            <img src="https://n1s1.hsmedia.ru/4b/5e/8e/4b5e8e5cf007192cf399ace6d4dff047/1706x1280_0x6lOY0pLP_8104071396783869025.jpg" alt="Сотрудник">
+                            <h3>Елена Петрова</h3>
+                            <p>Специалист по турам</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p>&copy; 2025 TravelSite. Все права защищены.</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно авторизации -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tabs">
+                <button class="tab-btn active" id="loginTab">Вход</button>
+                <button class="tab-btn" id="registerTab">Регистрация</button>
+            </div>
+            <div class="tab-content active" id="loginForm">
+                <form>
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" placeholder="Введите email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Пароль</label>
+                        <input type="password" id="loginPassword" placeholder="Введите пароль">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Войти</button>
+                </form>
+            </div>
+            <div class="tab-content" id="registerForm">
+                <form>
+                    <div class="form-group">
+                        <label for="regName">Имя</label>
+                        <input type="text" id="regName" placeholder="Введите имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" placeholder="Введите email">
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Пароль</label>
+                        <input type="password" id="regPassword" placeholder="Введите пароль">
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirm">Подтвердите пароль</label>
+                        <input type="password" id="regConfirm" placeholder="Повторите пароль">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

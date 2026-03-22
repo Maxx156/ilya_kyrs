@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отели - TravelSite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-globe"></i> TravelSite</a>
+            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="goryachie-putevki.html">Горящие путевки</a></li>
+                    <li><a href="oteli.html" class="active">Отели</a></li>
+                    <li><a href="strany.html">Страны</a></li>
+                    <li><a href="o-nas.html">О нас</a></li>
+                    <li><a href="kontakty.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Вход</button>
+                <button class="btn btn-primary" id="registerBtn"><i class="fas fa-user-plus"></i> Регистрация</button>
+            </div>
+            <button class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Заголовок страницы -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Отели мира</h1>
+                <p>Выберите идеальное размещение</p>
+            </div>
+        </section>
+
+        <!-- Фильтры для отелей -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="country">Страна:</label>
+                        <select id="country">
+                            <option>Все страны</option>
+                            <option>Турция</option>
+                            <option>ОАЭ</option>
+                            <option>Италия</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="stars">Звезды:</label>
+                        <select id="stars">
+                            <option>Любые</option>
+                            <option>5 звезд</option>
+                            <option>4 звезды</option>
+                            <option>3 звезды</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-hotel">Цена за ночь до:</label>
+                        <input type="number" id="price-hotel" placeholder="20000">
+                    </div>
+                    <button class="btn btn-primary">Применить</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Список отелей -->
+        <section class="hotels scroll-animation">
+            <div class="container">
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/a4/56/3d/rixos-premium-belek.jpg?w=500&h=-1&s=1" alt="Отель">
+                        <div class="card-content">
+                            <h3>Rixos Premium</h3>
+                            <p class="rating"><i class="fas fa-star"></i> 5 звезд</p>
+                            <p>Анталия, Турция</p>
+                            <p class="price">от 12 000 ₽/ночь</p>
+                            <button class="btn btn-primary">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/a9/e9/8e/caption.jpg?w=900&h=500&s=1" alt="Отель">
+                        <div class="card-content">
+                            <h3>Jumeirah Beach</h3>
+                            <p class="rating"><i class="fas fa-star"></i> 5 звезд</p>
+                            <p>Дубай, ОАЭ</p>
+                            <p class="price">от 25 000 ₽/ночь</p>
+                            <button class="btn btn-primary">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Grand_Hotel_June_2018_01.jpg" alt="Отель">
+                        <div class="card-content">
+                            <h3>Grand Hotel</h3>
+                            <p class="rating"><i class="fas fa-star"></i> 4 звезды</p>
+                            <p>Рим, Италия</p>
+                            <p class="price">от 9 000 ₽/ночь</p>
+                            <button class="btn btn-primary">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/39/42/f1/facade-rue-saint-lazare.jpg?w=900&h=500&s=1" alt="Отель">
+                        <div class="card-content">
+                            <h3>Hilton Paris</h3>
+                            <p class="rating"><i class="fas fa-star"></i> 5 звезд</p>
+                            <p>Париж, Франция</p>
+                            <p class="price">от 20 000 ₽/ночь</p>
+                            <button class="btn btn-primary">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/af/e3/a8/tsh-exterior.jpg?w=900&h=-1&s=1" alt="Отель">
+                        <div class="card-content">
+                            <h3>Four Seasons</h3>
+                            <p class="rating"><i class="fas fa-star"></i> 5 звезд</p>
+                            <p>Бангкок, Таиланд</p>
+                            <p class="price">от 15 000 ₽/ночь</p>
+                            <button class="btn btn-primary">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/475190955.jpg?k=969887d33a46868be809586de08b5227d8000c34b3ed734737030a4f9bca9685&o=" alt="Отель">
+                        <div class="card-content">
+                            <h3>Marriott Resort</h3>
+                            <p class="rating"><i class="fas fa-star"></i> 5 звезд</p>
+                            <p>Шарм-эль-Шейх, Египет</p>
+                            <p class="price">от 8 000 ₽/ночь</p>
+                            <button class="btn btn-primary">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Популярные отели по рейтингу -->
+        <section class="popular-hotels scroll-animation">
+            <div class="container">
+                <h2>Популярные отели по рейтингу</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/727476354.jpg?k=d1b5693a522b57dadb50372354077e637c8534c55780492dc91d6a16298147c1&o=" alt="Отель">
+                        <div class="card-content">
+                            <h3>Atlantis The Palm</h3>
+                            <p class="rating"><i class="fas fa-star"></i> 5 звезд</p>
+                            <p>Дубай, ОАЭ</p>
+                            <p class="price">от 30 000 ₽/ночь</p>
+                            <button class="btn btn-primary">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/529024726.jpg?k=83a37dd94af696270af9a93e21c85ed43bedf89d7f9ad529381e19a1aaa62d1a&o=" alt="Отель">
+                        <div class="card-content">
+                            <h3>Grand Hotel Tremezzo</h3>
+                            <p class="rating"><i class="fas fa-star"></i> 5 звезд</p>
+                            <p>Комо, Италия</p>
+                            <p class="price">от 40 000 ₽/ночь</p>
+                            <button class="btn btn-primary">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/d5/66/9c/hotel-exterior.jpg?w=900&h=500&s=1" alt="Отель">
+                        <div class="card-content">
+                            <h3>The Ritz-Carlton</h3>
+                            <p class="rating"><i class="fas fa-star"></i> 5 звезд</p>
+                            <p>Москва, Россия</p>
+                            <p class="price">от 25 000 ₽/ночь</p>
+                            <button class="btn btn-primary">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p>&copy; 2025 TravelSite. Все права защищены.</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно авторизации -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tabs">
+                <button class="tab-btn active" id="loginTab">Вход</button>
+                <button class="tab-btn" id="registerTab">Регистрация</button>
+            </div>
+            <div class="tab-content active" id="loginForm">
+                <form>
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" placeholder="Введите email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Пароль</label>
+                        <input type="password" id="loginPassword" placeholder="Введите пароль">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Войти</button>
+                </form>
+            </div>
+            <div class="tab-content" id="registerForm">
+                <form>
+                    <div class="form-group">
+                        <label for="regName">Имя</label>
+                        <input type="text" id="regName" placeholder="Введите имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" placeholder="Введите email">
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Пароль</label>
+                        <input type="password" id="regPassword" placeholder="Введите пароль">
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirm">Подтвердите пароль</label>
+                        <input type="password" id="regConfirm" placeholder="Повторите пароль">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

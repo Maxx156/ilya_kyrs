@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Горящие путевки - TravelSite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-globe"></i> TravelSite</a>
+            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="goryachie-putevki.html" class="active">Горящие путевки</a></li>
+                    <li><a href="oteli.html">Отели</a></li>
+                    <li><a href="strany.html">Страны</a></li>
+                    <li><a href="o-nas.html">О нас</a></li>
+                    <li><a href="kontakty.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Вход</button>
+                <button class="btn btn-primary" id="registerBtn"><i class="fas fa-user-plus"></i> Регистрация</button>
+            </div>
+            <button class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Заголовок страницы -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Горящие путевки</h1>
+                <p>Специальные предложения по лучшим ценам</p>
+            </div>
+        </section>
+
+        <!-- Фильтры -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="country">Страна:</label>
+                        <select id="country">
+                            <option>Все страны</option>
+                            <option>Турция</option>
+                            <option>Египет</option>
+                            <option>Таиланд</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price">Цена до:</label>
+                        <input type="number" id="price" placeholder="100000">
+                    </div>
+                    <div class="filter-group">
+                        <label for="date">Дата вылета:</label>
+                        <input type="date" id="date">
+                    </div>
+                    <button class="btn btn-primary">Применить</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Список горящих туров -->
+        <section class="tours scroll-animation">
+            <div class="container">
+                <div class="cards-grid">
+                    <div class="card hot">
+                        <span class="badge">Горящее предложение</span>
+                        <img src="https://cdn.globaldialog.ru/files/638/f303046057/mceu_97054745611670328367749.jpg" alt="Тур">
+                        <div class="card-content">
+                            <h3>Турция, 7 ночей</h3>
+                            <p class="price">от 45 000 ₽</p>
+                            <p>Отель 5*, всё включено, вылет 25 мая</p>
+                            <button class="btn btn-primary">Забронировать</button>
+                        </div>
+                    </div>
+                    <div class="card hot">
+                        <span class="badge">Горящее предложение</span>
+                        <img src="https://www.atorus.ru/sites/default/files/styles/head_carousel/public/2021-09/e5273c.jpg.webp?itok=BMg5euKV" alt="Тур">
+                        <div class="card-content">
+                            <h3>Египет, 10 ночей</h3>
+                            <p class="price">от 60 000 ₽</p>
+                            <p>Отель 4*, завтраки, вылет 30 мая</p>
+                            <button class="btn btn-primary">Забронировать</button>
+                        </div>
+                    </div>
+                    <div class="card hot">
+                        <span class="badge">Горящее предложение</span>
+                        <img src="https://static.tildacdn.com/tild3932-3638-4366-b465-333264336139/photo.jpg" alt="Тур">
+                        <div class="card-content">
+                            <h3>Таиланд, 14 ночей</h3>
+                            <p class="price">от 95 000 ₽</p>
+                            <p>Отель 3*, без питания, вылет 1 июня</p>
+                            <button class="btn btn-primary">Забронировать</button>
+                        </div>
+                    </div>
+                    <div class="card hot">
+                        <span class="badge">Горящее предложение</span>
+                        <img src="https://www.sibdom.ru/images/photo_crop_1050_700/gallery/a1/a180/a1801aa21eea2299a897a711a6f15974.jpg" alt="Тур">
+                        <div class="card-content">
+                            <h3>ОАЭ, 8 ночей</h3>
+                            <p class="price">от 85 000 ₽</p>
+                            <p>Отель 5*, завтраки, вылет 2 июня</p>
+                            <button class="btn btn-primary">Забронировать</button>
+                        </div>
+                    </div>
+                    <div class="card hot">
+                        <span class="badge">Горящее предложение</span>
+                        <img src="https://www.soleanstour.ru/upload/medialibrary/847/1.jpg" alt="Тур">
+                        <div class="card-content">
+                            <h3>Греция, 7 ночей</h3>
+                            <p class="price">от 70 000 ₽</p>
+                            <p>Отель 4*, полупансион, вылет 10 июня</p>
+                            <button class="btn btn-primary">Забронировать</button>
+                        </div>
+                    </div>
+                    <div class="card hot">
+                        <span class="badge">Горящее предложение</span>
+                        <img src="https://cdn2.tu-tu.ru/image/pagetree_node_data/1/ef67ee3d14d8713d26fba22d885551b0/" alt="Тур">
+                        <div class="card-content">
+                            <h3>Испания, 10 ночей</h3>
+                            <p class="price">от 90 000 ₽</p>
+                            <p>Отель 3*, без питания, вылет 15 июня</p>
+                            <button class="btn btn-primary">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Почему горящие туры выгодны -->
+        <section class="features scroll-animation">
+            <div class="container">
+                <h2>Почему горящие туры — это выгодно</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-percent"></i>
+                        <h3>Скидки до 50%</h3>
+                        <p>Самые низкие цены на популярные направления</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Быстрый вылет</h3>
+                        <p>Путешествие уже через несколько дней</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-star"></i>
+                        <h3>Лучшие отели</h3>
+                        <p>Только проверенные варианты размещения</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p>&copy; 2025 TravelSite. Все права защищены.</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно авторизации -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tabs">
+                <button class="tab-btn active" id="loginTab">Вход</button>
+                <button class="tab-btn" id="registerTab">Регистрация</button>
+            </div>
+            <div class="tab-content active" id="loginForm">
+                <form>
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" placeholder="Введите email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Пароль</label>
+                        <input type="password" id="loginPassword" placeholder="Введите пароль">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Войти</button>
+                </form>
+            </div>
+            <div class="tab-content" id="registerForm">
+                <form>
+                    <div class="form-group">
+                        <label for="regName">Имя</label>
+                        <input type="text" id="regName" placeholder="Введите имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" placeholder="Введите email">
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Пароль</label>
+                        <input type="password" id="regPassword" placeholder="Введите пароль">
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirm">Подтвердите пароль</label>
+                        <input type="password" id="regConfirm" placeholder="Повторите пароль">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
